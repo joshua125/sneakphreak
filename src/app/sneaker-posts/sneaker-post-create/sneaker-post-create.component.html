@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form (submit)="onSavePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+    <mat-form-field>
+    <input
+      matInput
+      type="text"
+      name="name"
+      placeholder="Sneaker Name"
+      ngModel>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea 
+        matInput 
+        rows="6"
+        name="description" 
+        placeholder="Image URL"
+        ngModel>{{newPost}}</textarea>
+    </mat-form-field>
+    <button mat-raised-button
+          type="submit"
+          color="primary">Save Post</button>
+  </form>
+</mat-card>
+
+
+<p>{{newPost}}</p>
