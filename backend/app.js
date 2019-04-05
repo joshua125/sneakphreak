@@ -6,7 +6,9 @@ const mongoose = require('mongoose');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect("mongodb+srv://codex:H7pPL7b8BLnXRQj8@cluster0-rtcpi.mongodb.net/test?retryWrites=true")
+//mongo db credentials here
+
+mongoose.connect("mongodb+srv://USERNAME:PASSWORD@cluster0-rtcpi.mongodb.net/test?retryWrites=true")
 .then(()=>{
     console.log('MongoDB Cluster Connected... ')
 }).catch(()=>{
